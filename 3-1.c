@@ -7,37 +7,34 @@ float obtenerPromedio(int valores[], int posicion) {
   int i;
   float suma = 0.0;
 
-  for (i = 0; i < cantidad; ++i)
+//Este For nos ayuda a que recorra el arreglo y sumar cada dato a la variable suma
+  for (i = 0; i < posicion; ++i)
     suma += valores[i];
 
-  return suma / (float) cantidad;
+  return suma / (float) posicion;
 }
 
 int main() {
+//Declarando las variables que vamos a usar en nuestro main
+  int numeros[10];
+  char opcion[3];
+  int n, i;
 
-    int notas[10];
-    char nombre[20];
-    char opcion[3];
-    int n, i;
+  do {
+    //Le vamos a pedir al usuario que nos diga de cuantos numeros quiere el arreglo
+    printf("Cuantas posiciones tiene el arreglo? ");
+    scanf("%d", &n);
 
-    do {
-        printf("Ingrese nombre del alumno: ");
-        scanf("%s", nombre);
+    //Este for recibe los valores que el usuario quiera poner en el arreglo.
+    for (i = 0; i < n; ++i) {
+      printf("  Posición %d: ", i + 1);
+      scanf("%d", &numeros[i]);
+    }
 
-        printf("Cuantas notas tiene %s? ", nombre);
-        scanf("%d", &n);
+    //Imprimir el promedio haciendo uso de la funcion antes declarada
+    printf("El promedio del arreglo es %.1f\n", obtenerPromedio(numeros, n));
 
-        for (i = 0; i < n; ++i) {
-            printf("  Nota %d: ", i + 1);
-            scanf("%d", &notas[i]);
-        }
+    }
 
-        printf("El promedio de %s es %.1f\n", nombre, promedio(notas, n));
-
-        printf("Desea calcular mas promedios (si/no)? ");
-        scanf("%s", opcion);
-
-    } while (opcion[0] == 's' || opcion[0] == 'S');
-
-    return 0;
+  return 0;
 }
