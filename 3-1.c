@@ -20,7 +20,6 @@ int main() {
   char opcion[3];
   int n, i;
 
-  do {
     //Le vamos a pedir al usuario que nos diga de cuantos numeros quiere el arreglo
     printf("Cuantas posiciones tiene el arreglo? ");
     scanf("%d", &n);
@@ -34,7 +33,5 @@ int main() {
     //Imprimir el promedio haciendo uso de la funcion antes declarada
     printf("El promedio del arreglo es %.1f\n", obtenerPromedio(numeros, n));
 
-    }
-
-  return 0;
+    return 0;
 }
