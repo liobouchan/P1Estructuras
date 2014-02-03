@@ -1,13 +1,14 @@
 /* Programa al que se le pasa una cadena de caracteres en minusculas */
 /* y llama a una funcion que convertira esa cadena en mayusculas */
 #include<stdio.h>
-#include<curses.h>
+#include<conio.h>
+#include <stdlib.h> 
 
 void MinToMay(char string[]); /* cabecera de la funcion */
 
-void main() {
+int main() {
   char cadena[80];
-  clrscr();
+  system ("cls");
   printf("Introduce una cadena:");
   gets(cadena);
   MinToMay(cadena); /* Llama a la funcion */
