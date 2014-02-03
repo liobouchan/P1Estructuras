@@ -6,11 +6,23 @@ void mayusculas(char *);
 void minusculas(char *);
 
 void ingreso(char *s){
-
   system ("cls");
   printf("Ingresar una cadena: \n");
   gets(s);
+}
 
+void mayusculas(char *s){
+
+for( ; *s!='\0'; s++){
+  if(*s>='a' && *s<='z'){
+    *s-=(char)32;
+}else{
+    while(*s!='\0'){
+ *s+=(char)32;
+  s++;
+}
+}
+}
 }
 
 
@@ -22,22 +34,14 @@ int main(void){
 
   mayusculas(&string[0]);
   printf("Convertido a mayusculas: %s\n",string);
-
+/*
   minusculas(string);
   printf("Convertido a minusculas: %s\n",string);
-
+*/
   getch();
 
 }
 
-
-void mayusculas(char *s){
-
-for( ; *s!='\0'; s++)
-  if(*s>='a' && *s<='z')
-    *s-=(char)32;
-
-}
 
 void minusculas(char *s){
 
