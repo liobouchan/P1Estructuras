@@ -1,4 +1,12 @@
-#include <stdio.h>
+/*!
+ *  \mainpage Practica 1
+ *  \author -Juárez Bouchan José Leonardo\n
+            -Martínez Miranda Erubey Gustavo\n
+            -Rodríguez Rosas Daniel Arturo\n  
+ *  \date 1 de Enero del 2014  
+   @date Creado el 1 de Enero del 2014 por alumnos del grupo 1CV4
+*/
+#include <stdio.h>//Libreria Principal
 #include <string.h>
 
 int validarPalindroma( char cad[] );
