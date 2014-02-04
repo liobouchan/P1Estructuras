@@ -9,6 +9,7 @@
 #include <stdio.h>//Libreria Principal
 #include <string.h>
 
+//Declaracion de Prototipos
 int validarPalindroma( char cad[] );
 
 int validarPalindroma( char cad[]){

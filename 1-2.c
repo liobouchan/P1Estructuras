@@ -7,8 +7,9 @@
    @date Creado el 1 de Enero del 2014 por alumnos del grupo 1CV4
 */
 #include <stdio.h>//Libreria principal
-#include <conio.h>
+#include <conio.h>// Libreria conio, utilizada para contener los prototipos de las funciones
 
+//Declaracion de Prototipos
 void texto(char *);
 void convertir(char *);
 
