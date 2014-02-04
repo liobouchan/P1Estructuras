@@ -13,12 +13,14 @@
 void texto(char *);
 void convertir(char *);
 
+//Funcion que limpia la pantalla, pide el texto y lo almacena en una variable
 void texto(char *s){
   system ("cls");
   printf("Ingresar una cadena: \n");
   gets(s);
 }
 
+//Funcion que convierte el texto en Mayusculas o minusculas depende de lo ingresado
 void convertir(char *s){
   for( ; *s!='\0'; s++){
     if(*s>='a' && *s<='z'){
@@ -33,11 +35,14 @@ void convertir(char *s){
 }
 
 int main(void){
-  char string[256];
+  char string[256];//Declaracion del arreglo para almacenar cadena
 
+//Llamamos a la funcion para recibir la cadena
   texto(string);
 
+//Mandamos a llamar a la funcion que nos convertira el texto en Mayus o Min
   convertir(&string[0]);
+//Imprimimos lo convertidos
   printf("Tu texto convertido: %s\n",string);
 
   getch();
