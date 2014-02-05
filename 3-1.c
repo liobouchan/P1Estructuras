@@ -9,7 +9,7 @@
 #include <stdio.h>//Libreria principal
 
 //Declarando la funcion que nos devolverá el promedio
-float obtenerPromedio(int valores[], int posicion) {
+float obtenerPromedio(int*valores, int posicion) {
 
 //Declarando variables que usaremos para el cálculo del promedio
   int i;
@@ -26,7 +26,7 @@ int main() {
 //Declarando las variables que vamos a usar en nuestro main
   int numeros[10];
   char opcion[3];
-  int n, i;
+  int n, i,*ptr;
 
     //Le vamos a pedir al usuario que nos diga de cuantos numeros quiere el arreglo
     printf("Cuantas posiciones tiene el arreglo? ");
@@ -37,9 +37,9 @@ int main() {
       printf("  Posición %d: ", i + 1);
       scanf("%d", &numeros[i]);
     }
-
+    ptr=numeros;
     //Imprimir el promedio haciendo uso de la funcion antes declarada
-    printf("El promedio del arreglo es %.1f\n", obtenerPromedio(numeros, n));
+    printf("El promedio del arreglo es %.1f\n", obtenerPromedio(ptr, n));
 
     return 0;
 }
